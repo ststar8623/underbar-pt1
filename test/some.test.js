@@ -11,4 +11,11 @@ describe('some()', () => {
     expect(_.some(nums, num => num % 2 === 1)).toBe(false);
   });
 
+  // my own test
+
+  it('return true if any element is a number', () => {
+    const val = ['steven', 'leung', 31, 'male', true];
+    expect(_.some(val, el => el === Number(el))).toBe(true);
+  });
+
 });

@@ -18,4 +18,18 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  // my own test
+  it('rejects non-null values from an object', () => {
+    const order = {
+      entree: 'burger',
+      side: null,
+      condiment: 'ketchup',
+      drink: null,
+      dessert: 'cookie'
+    };
+
+    const nullOrderItems = _.reject(order, (value) => value !== null);
+    expect(nullOrderItems).toEqual([null, null]);
+  });
 });

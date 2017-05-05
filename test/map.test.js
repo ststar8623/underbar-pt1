@@ -6,4 +6,11 @@ describe('map()', () => {
     const mappedArr = _.map(arr, (el) => el * el);
     expect(mappedArr).toEqual([1, 4, 9, 16, 25]);
   });
+
+  // my own test
+  it('turns every number in an array to stringNum and turns every stringNum back in to a number', () => {
+    const arr = [1, '2', 3, '4', 5];
+    const mappedArr = _.map(arr, (el) => typeof el === 'number' ? el + '' : Number(el));
+    expect(mappedArr).toEqual(['1', 2, '3', 4, '5']);
+  });
 });

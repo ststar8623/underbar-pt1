@@ -13,4 +13,10 @@ describe('reduce()', () => {
     expect(result).toEqual(15);
   });
 
+  // my own test
+  it('reduces an array of numbers *with* an explicit initial value of 15 for the accumulator', () => {
+    const nums = [1, 2, 3, 4, 5];
+    const result = _.reduce(nums, (acc, num) => acc - num, 15);
+    expect(result).toEqual(0);
+  });
 });

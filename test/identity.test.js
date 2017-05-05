@@ -20,4 +20,10 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+  // my own test
+  it('returns undefined if given an unassign variable', () => {
+    let val;
+    expect(_.identity(val)).toBe(undefined);
+  })
 });

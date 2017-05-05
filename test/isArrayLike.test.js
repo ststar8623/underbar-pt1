@@ -18,4 +18,10 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  // my own test
+  it('returns false for given a empty obj', () => {
+    const emptyObj = {};
+    expect(_.isArrayLike(emptyObj)).toBe(false);
+  })
 });

@@ -39,5 +39,22 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  // my own test
+  it('iterates every element of an array-like object with array, passing that element, its corresponding index, and the entire array to the callback', () => {
+    const arrLikeObj = {
+      length: 3,
+      1: [1,2,3,4,5],
+      2: { length: 6 },
+      name: 'Steven',
+      age: 31
+    };
+    let count = 0;
+    _.each(arrLikeObj, function(element, index, iterateArrayLikeObj){
+      expect(element).toEqual(iterateArrayLikeObj[index]);
+      count++;
+    });
+    expect(count).toBe(3);
+  })
 });
 

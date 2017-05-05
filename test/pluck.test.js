@@ -19,7 +19,9 @@ describe('pluck()', () => {
       { name: 'Lazarus', age: 999},
       { name: 'Bethany', age: 14}
     ];
-    const result = _.pluck(people, 'name');
+
+    const key = 'name';
+    const result = _.pluck(people, key);
     expect(result).toEqual(['Harriet', 'Lazarus', 'Bethany']);
   });
 
